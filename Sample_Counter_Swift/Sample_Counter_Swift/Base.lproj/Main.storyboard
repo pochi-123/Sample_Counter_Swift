@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sample_Counter_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppn-3G-fyO">
+                                <rect key="frame" x="0.0" y="418" width="414" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXp-nG-qjp">
+                                <rect key="frame" x="192" y="508" width="30" height="30"/>
+                                <state key="normal" title="add"/>
+                                <connections>
+                                    <action selector="addCounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s92-rx-KS0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaJ-LZ-Non">
+                                <rect key="frame" x="186.5" y="568" width="41" height="30"/>
+                                <state key="normal" title="minus"/>
+                                <connections>
+                                    <action selector="minusCounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OdX-In-Mlz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIl-17-wuK">
+                                <rect key="frame" x="189.5" y="628" width="35" height="30"/>
+                                <state key="normal" title="reset"/>
+                                <connections>
+                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1c7-tf-emd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ppn-3G-fyO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6wZ-26-YAt"/>
+                            <constraint firstItem="lXp-nG-qjp" firstAttribute="top" secondItem="ppn-3G-fyO" secondAttribute="bottom" constant="30" id="DgY-17-2K1"/>
+                            <constraint firstItem="ppn-3G-fyO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HuE-DQ-dtC"/>
+                            <constraint firstItem="mIl-17-wuK" firstAttribute="top" secondItem="ZaJ-LZ-Non" secondAttribute="bottom" constant="30" id="LMb-r3-4x2"/>
+                            <constraint firstItem="mIl-17-wuK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RzW-jm-2VN"/>
+                            <constraint firstItem="ppn-3G-fyO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VXI-CD-rHE"/>
+                            <constraint firstItem="lXp-nG-qjp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="brJ-6o-VFN"/>
+                            <constraint firstItem="ZaJ-LZ-Non" firstAttribute="top" secondItem="lXp-nG-qjp" secondAttribute="bottom" constant="30" id="ix1-en-a7B"/>
+                            <constraint firstItem="ppn-3G-fyO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pe5-Ck-Gxa"/>
+                            <constraint firstItem="ZaJ-LZ-Non" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xiG-94-LGC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="lXp-nG-qjp" id="xSJ-m0-WCg"/>
+                        <outlet property="countText" destination="ppn-3G-fyO" id="fcR-be-YFO"/>
+                        <outlet property="minusButton" destination="ZaJ-LZ-Non" id="aLc-Nh-dNF"/>
+                        <outlet property="resetButton" destination="mIl-17-wuK" id="8Rz-fd-wFr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>
